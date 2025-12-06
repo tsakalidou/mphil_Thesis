@@ -64,7 +64,7 @@ warnings.filterwarnings('ignore')
 
 class Config:
     # Data path - UPDATE THIS
-    DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
+    DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
     
     # Audio settings
     SAMPLE_RATE = 44100

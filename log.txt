@@ -11,6 +11,46 @@ Configuration:
   - Mel filters: 40
   - MFCC coefficients: 12
 
+Traceback (most recent call last):
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 665, in <module>
+    X, y, groups, subject_info = load_data_with_subjects(
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 280, in load_data_with_subjects
+    cry_folders = os.listdir(data_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py"
+======================================================================
+ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
+======================================================================
+
+Configuration:
+  - Audio length: 1.0s (44100 samples)
+  - Sample rate: 44100 Hz
+  - FFT size: 512
+  - Frame size: 11.61ms
+  - Frame step: 3.85ms
+  - Mel filters: 40
+  - MFCC coefficients: 12
+
+Traceback (most recent call last):
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 664, in <module>
+    X, y, groups, subject_info = load_data_with_subjects(
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 280, in load_data_with_subjects
+    cry_folders = os.listdir(data_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou_Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py"
+======================================================================
+ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
+======================================================================
+
+Configuration:
+  - Audio length: 1.0s (44100 samples)
+  - Sample rate: 44100 Hz
+  - FFT size: 512
+  - Frame size: 11.61ms
+  - Frame step: 3.85ms
+  - Mel filters: 40
+  - MFCC coefficients: 12
+
 Loading and processing audio files...
   ASD1: 9 samples loaded
   ASD10: 4 samples loaded
@@ -253,4 +293,214 @@ SVM_RBF                   0.6212 (±0.0759) 0.6513       0.6610
 ======================================================================
 BEST MODEL: SVM_Linear with 65.18% accuracy
 ======================================================================
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis>   
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis>   & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py"
+======================================================================
+ASD vs TD CLASSIFICATION - ENHANCED PIPELINE V2
+Started: 2025-12-06 13:13:18
+======================================================================
+
+Configuration:
+  - Audio duration: 2.0s
+  - Augmentation: True (x3)
+  - Pitch features: True
+  - Voice quality: True
+  - Age feature: True
+  - Subject voting: True
+Loading and extracting features...
+Traceback (most recent call last):
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 938, in <module>
+    results = main()
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 903, in main
+    X, y, groups, subjects = load_data(config)
+  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 593, in load_data
+    folders = sorted(os.listdir(config.DATA_PATH))
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py"
+======================================================================
+ASD vs TD CLASSIFICATION - ENHANCED PIPELINE V2
+Started: 2025-12-06 13:15:19
+======================================================================
+
+Configuration:
+  - Audio duration: 2.0s
+  - Augmentation: True (x3)
+  - Pitch features: True
+  - Voice quality: True
+  - Age feature: True
+  - Subject voting: True
+Loading and extracting features...
+  ASD1: 9 samples (+27 augmented)
+  ASD10: 4 samples (+12 augmented)
+  ASD11: 12 samples (+36 augmented)
+  ASD12: 18 samples (+54 augmented)
+  ASD13: 3 samples (+9 augmented)
+  ASD14: 5 samples (+15 augmented)
+  ASD15: 5 samples (+15 augmented)
+  ASD16: 2 samples (+6 augmented)
+  ASD17: 1 samples (+3 augmented)
+  ASD18: 2 samples (+6 augmented)
+  ASD19: 1 samples (+3 augmented)
+  ASD2: 3 samples (+9 augmented)
+  ASD20: 19 samples (+57 augmented)
+  ASD21: 1 samples (+3 augmented)
+  ASD22: 2 samples (+6 augmented)
+  ASD23: 6 samples (+18 augmented)
+  ASD24: 7 samples (+21 augmented)
+  ASD25: 12 samples (+36 augmented)
+  ASD26: 5 samples (+15 augmented)
+  ASD27: 3 samples (+9 augmented)
+  ASD28: 2 samples (+6 augmented)
+  ASD29: 8 samples (+24 augmented)
+  ASD3: 5 samples (+15 augmented)
+  ASD30: 2 samples (+6 augmented)
+  ASD31: 7 samples (+21 augmented)
+  ASD4: 13 samples (+39 augmented)
+  ASD5: 14 samples (+42 augmented)
+  ASD6: 4 samples (+12 augmented)
+  ASD7: 11 samples (+33 augmented)
+  ASD8: 2 samples (+6 augmented)
+  ASD9: 3 samples (+9 augmented)
+  TD1: 11 samples (+33 augmented)
+  TD10: 2 samples (+6 augmented)
+  TD11: 5 samples (+15 augmented)
+  TD12: 7 samples (+21 augmented)
+  TD13: 7 samples (+21 augmented)
+  TD14: 9 samples (+27 augmented)
+  TD15: 4 samples (+12 augmented)
+  TD16: 3 samples (+9 augmented)
+  TD17: 2 samples (+6 augmented)
+  TD18: 6 samples (+18 augmented)
+  TD19: 4 samples (+12 augmented)
+  TD2: 12 samples (+36 augmented)
+  TD20: 5 samples (+15 augmented)
+  TD21: 11 samples (+33 augmented)
+  TD22: 4 samples (+12 augmented)
+  TD23: 4 samples (+12 augmented)
+  TD24: 12 samples (+36 augmented)
+  TD25: 5 samples (+15 augmented)
+  TD26: 2 samples (+6 augmented)
+  TD27: 5 samples (+15 augmented)
+  TD28: 2 samples (+6 augmented)
+  TD29: 16 samples (+48 augmented)
+  TD3: 2 samples (+6 augmented)
+  TD30: 6 samples (+18 augmented)
+  TD31: 2 samples (+6 augmented)
+  TD4: 6 samples (+18 augmented)
+  TD5: 3 samples (+9 augmented)
+  TD6: 3 samples (+9 augmented)
+  TD7: 3 samples (+9 augmented)
+  TD8: 3 samples (+9 augmented)
+  TD9: 2 samples (+6 augmented)
+
+Data loaded:
+  Samples: 1436
+  Features: 499
+  ASD: 764, TD: 672
+  Subjects: 62
+
+Original features: 499
+Selected features: 200
+
+Using 5-Fold Group CV
+
+======================================================================
+MODEL TRAINING
+======================================================================
+
+──────────────────────────────────────────────────
+Training: SVM_RBF
+──────────────────────────────────────────────────
+  Fold 1: 0.7188 (12 subjects)
+  Fold 2: 0.7708 (12 subjects)
+  Fold 3: 0.5972 (13 subjects)
+  Fold 4: 0.4618 (13 subjects)
+  Fold 5: 0.7113 (12 subjects)
+
+  Sample-level:  Acc=0.6518, F1=0.6680, AUC=0.7266
+  Subject-level: Acc=0.7097, F1=0.7273, AUC=0.7825
+
+──────────────────────────────────────────────────
+Training: SVM_Linear
+──────────────────────────────────────────────────
+  Fold 1: 0.7604 (12 subjects)
+  Fold 2: 0.7083 (12 subjects)
+  Fold 3: 0.5625 (13 subjects)
+  Fold 4: 0.4271 (13 subjects)
+  Fold 5: 0.6937 (12 subjects)
+
+  Sample-level:  Acc=0.6302, F1=0.6462, AUC=0.6951
+  Subject-level: Acc=0.6290, F1=0.6667, AUC=0.7409
+
+──────────────────────────────────────────────────
+Training: Random_Forest
+──────────────────────────────────────────────────
+  Fold 1: 0.7569 (12 subjects)
+  Fold 2: 0.7882 (12 subjects)
+  Fold 3: 0.7153 (13 subjects)
+  Fold 4: 0.5069 (13 subjects)
+  Fold 5: 0.6725 (12 subjects)
+
+  Sample-level:  Acc=0.6880, F1=0.6989, AUC=0.7396
+  Subject-level: Acc=0.7581, F1=0.7619, AUC=0.7992
+
+──────────────────────────────────────────────────
+Training: Gradient_Boosting
+──────────────────────────────────────────────────
+  Fold 1: 0.7986 (12 subjects)
+  Fold 2: 0.8090 (12 subjects)
+  Fold 3: 0.4896 (13 subjects)
+  Fold 4: 0.5729 (13 subjects)
+  Fold 5: 0.6092 (12 subjects)
+
+  Sample-level:  Acc=0.6560, F1=0.6702, AUC=0.7083
+  Subject-level: Acc=0.7258, F1=0.7463, AUC=0.7409
+
+──────────────────────────────────────────────────
+Training: Extra_Trees
+──────────────────────────────────────────────────
+  Fold 1: 0.7361 (12 subjects)
+  Fold 2: 0.7569 (12 subjects)
+  Fold 3: 0.6875 (13 subjects)
+  Fold 4: 0.5278 (13 subjects)
+  Fold 5: 0.7254 (12 subjects)
+
+  Sample-level:  Acc=0.6866, F1=0.6976, AUC=0.7315
+  Subject-level: Acc=0.7258, F1=0.7385, AUC=0.7971
+
+──────────────────────────────────────────────────
+Training: MLP
+──────────────────────────────────────────────────
+  Fold 1: 0.7188 (12 subjects)
+  Fold 2: 0.6632 (12 subjects)
+  Fold 3: 0.5521 (13 subjects)
+  Fold 4: 0.4896 (13 subjects)
+  Fold 5: 0.6620 (12 subjects)
+
+  Sample-level:  Acc=0.6170, F1=0.6358, AUC=0.6704
+  Subject-level: Acc=0.6613, F1=0.6667, AUC=0.7211
+
+──────────────────────────────────────────────────
+Training: Voting Ensemble
+──────────────────────────────────────────────────
+
+  Sample-level:  Acc=0.7040, F1=0.7157, AUC=0.7528
+  Subject-level: Acc=0.7419, F1=0.7500, AUC=0.8075
+
+======================================================================
+FINAL RESULTS (SUBJECT-LEVEL)
+======================================================================
+
+Model                Subject Acc     Subject F1   Subject AUC
+────────────────────────────────────────────────────────────
+Random_Forest        0.7581          0.7619        0.7992
+Voting_Ensemble      0.7419          0.7500        0.8075
+Gradient_Boosting    0.7258          0.7463        0.7409
+Extra_Trees          0.7258          0.7385        0.7971
+SVM_RBF              0.7097          0.7273        0.7825
+MLP                  0.6613          0.6667        0.7211
+SVM_Linear           0.6290          0.6667        0.7409
+
+======================================================================
+🏆 BEST: Random_Forest - Subject Accuracy: 75.81%
+======================================================================
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> 
