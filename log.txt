@@ -1,506 +1,283 @@
-======================================================================
-ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
-======================================================================
+Loading data...
 
-Configuration:
-  - Audio length: 1.0s (44100 samples)
-  - Sample rate: 44100 Hz
-  - FFT size: 512
-  - Frame size: 11.61ms
-  - Frame step: 3.85ms
-  - Mel filters: 40
-  - MFCC coefficients: 12
+Loaded 359 samples from 62 subjects
+ASD: 191 samples, TD: 168 samples
 
-Traceback (most recent call last):
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 665, in <module>
-    X, y, groups, subject_info = load_data_with_subjects(
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 280, in load_data_with_subjects
-    cry_folders = os.listdir(data_path)
-FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py"
-======================================================================
-ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
-======================================================================
+================================================================================
+FOLD COMPOSITION ANALYSIS
+================================================================================
 
-Configuration:
-  - Audio length: 1.0s (44100 samples)
-  - Sample rate: 44100 Hz
-  - FFT size: 512
-  - Frame size: 11.61ms
-  - Frame step: 3.85ms
-  - Mel filters: 40
-  - MFCC coefficients: 12
-
-Traceback (most recent call last):
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 664, in <module>
-    X, y, groups, subject_info = load_data_with_subjects(
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py", line 280, in load_data_with_subjects
-    cry_folders = os.listdir(data_path)
-FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou_Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/improved_asd_classification.py"
-======================================================================
-ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
-======================================================================
-
-Configuration:
-  - Audio length: 1.0s (44100 samples)
-  - Sample rate: 44100 Hz
-  - FFT size: 512
-  - Frame size: 11.61ms
-  - Frame step: 3.85ms
-  - Mel filters: 40
-  - MFCC coefficients: 12
-
-Loading and processing audio files...
-  ASD1: 9 samples loaded
-  ASD10: 4 samples loaded
-  ASD11: 12 samples loaded
-  ASD12: 18 samples loaded
-  ASD13: 3 samples loaded
-  ASD14: 5 samples loaded
-  ASD15: 5 samples loaded
-  ASD16: 2 samples loaded
-  ASD17: 1 samples loaded
-  ASD18: 2 samples loaded
-  ASD19: 1 samples loaded
-  ASD2: 3 samples loaded
-  ASD20: 19 samples loaded
-  ASD21: 1 samples loaded
-  ASD22: 2 samples loaded
-  ASD23: 6 samples loaded
-  ASD24: 7 samples loaded
-  ASD25: 12 samples loaded
-  ASD26: 5 samples loaded
-  ASD27: 3 samples loaded
-  ASD28: 2 samples loaded
-  ASD29: 8 samples loaded
-  ASD3: 5 samples loaded
-  ASD30: 2 samples loaded
-  ASD31: 7 samples loaded
-  ASD4: 13 samples loaded
-  ASD5: 14 samples loaded
-  ASD6: 4 samples loaded
-  ASD7: 11 samples loaded
-  ASD8: 2 samples loaded
-  ASD9: 3 samples loaded
-  TD1: 11 samples loaded
-  TD10: 2 samples loaded
-  TD11: 5 samples loaded
-  TD12: 7 samples loaded
-  TD13: 7 samples loaded
-  TD14: 9 samples loaded
-  TD15: 4 samples loaded
-  TD16: 3 samples loaded
-  TD17: 2 samples loaded
-  TD18: 6 samples loaded
-  TD19: 4 samples loaded
-  TD2: 12 samples loaded
-  TD20: 5 samples loaded
-  TD21: 11 samples loaded
-  TD22: 4 samples loaded
-  TD23: 4 samples loaded
-  TD24: 12 samples loaded
-  TD25: 5 samples loaded
-  TD26: 2 samples loaded
-  TD27: 5 samples loaded
-  TD28: 2 samples loaded
-  TD29: 16 samples loaded
-  TD3: 2 samples loaded
-  TD30: 6 samples loaded
-  TD31: 2 samples loaded
-  TD4: 6 samples loaded
-  TD5: 3 samples loaded
-  TD6: 3 samples loaded
-  TD7: 3 samples loaded
-  TD8: 3 samples loaded
-  TD9: 2 samples loaded
-
-──────────────────────────────────────────────────
-DATA SUMMARY
-──────────────────────────────────────────────────
-Total samples: 359
-ASD samples: 191 (53.2%)
-TD samples: 168 (46.8%)
-Number of subjects: 62
-Feature dimensions: 376
-
-Original feature count: 376
-Selected feature count: 200
-
-======================================================================
-MODEL EVALUATION WITH SUBJECT-LEVEL CROSS-VALIDATION
-======================================================================
-
-──────────────────────────────────────────────────
-Training SVM_RBF...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6111 (12 subjects in test)
-  Fold 2: Accuracy = 0.7083 (12 subjects in test)
-  Fold 3: Accuracy = 0.5694 (13 subjects in test)
-  Fold 4: Accuracy = 0.5139 (13 subjects in test)
-  Fold 5: Accuracy = 0.7042 (12 subjects in test)
-
-  RESULTS for SVM_RBF:
-  ├── Accuracy:  0.6212 (±0.0759)
-  ├── F1 Score:  0.6513
-  ├── Precision: 0.6382
-  ├── Recall:    0.6649
-  ├── AUC-ROC:   0.6610
-  └── Best params: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}
-
-  Confusion Matrix:
-  [[TN= 96  FP= 72]
-   [FN= 64  TP=127]]
-
-──────────────────────────────────────────────────
-Training SVM_Linear...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6389 (12 subjects in test)
-  Fold 2: Accuracy = 0.6806 (12 subjects in test)
-  Fold 3: Accuracy = 0.6667 (13 subjects in test)
-  Fold 4: Accuracy = 0.5417 (13 subjects in test)
-  Fold 5: Accuracy = 0.7324 (12 subjects in test)
-
-  RESULTS for SVM_Linear:
-  ├── Accuracy:  0.6518 (±0.0630)
-  ├── F1 Score:  0.6736
-  ├── Precision: 0.6719
-  ├── Recall:    0.6754
-  ├── AUC-ROC:   0.6811
-  └── Best params: {'C': 0.1, 'kernel': 'linear'}
-
-  Confusion Matrix:
-  [[TN=105  FP= 63]
-   [FN= 62  TP=129]]
-
-──────────────────────────────────────────────────
-Training Random_Forest...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6944 (12 subjects in test)
-  Fold 2: Accuracy = 0.7639 (12 subjects in test)
-  Fold 3: Accuracy = 0.6111 (13 subjects in test)
-  Fold 4: Accuracy = 0.4583 (13 subjects in test)
-  Fold 5: Accuracy = 0.6901 (12 subjects in test)
-
-  RESULTS for Random_Forest:
-  ├── Accuracy:  0.6435 (±0.1045)
-  ├── F1 Score:  0.6684
-  ├── Precision: 0.6615
-  ├── Recall:    0.6754
-  ├── AUC-ROC:   0.6885
-  └── Best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
-
-  Confusion Matrix:
-  [[TN=102  FP= 66]
-   [FN= 62  TP=129]]
-
-──────────────────────────────────────────────────
-Training Gradient_Boosting...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6528 (12 subjects in test)
-  Fold 2: Accuracy = 0.7222 (12 subjects in test)
-  Fold 3: Accuracy = 0.6111 (13 subjects in test)
-  Fold 4: Accuracy = 0.4306 (13 subjects in test)
-  Fold 5: Accuracy = 0.7183 (12 subjects in test)
-
-  RESULTS for Gradient_Boosting:
-  ├── Accuracy:  0.6267 (±0.1067)
-  ├── F1 Score:  0.6474
-  ├── Precision: 0.6508
-  ├── Recall:    0.6440
-  ├── AUC-ROC:   0.6848
-  └── Best params: {'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
-
-  Confusion Matrix:
-  [[TN=102  FP= 66]
-   [FN= 68  TP=123]]
-
-──────────────────────────────────────────────────
-Training MLP...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6250 (12 subjects in test)
-  Fold 2: Accuracy = 0.7361 (12 subjects in test)
-  Fold 3: Accuracy = 0.6389 (13 subjects in test)
-  Fold 4: Accuracy = 0.5417 (13 subjects in test)
-  Fold 5: Accuracy = 0.7042 (12 subjects in test)
-
-  RESULTS for MLP:
-  ├── Accuracy:  0.6490 (±0.0676)
-  ├── F1 Score:  0.6719
-  ├── Precision: 0.6684
-  ├── Recall:    0.6754
-  ├── AUC-ROC:   0.7048
-  └── Best params: {'alpha': 0.01, 'hidden_layer_sizes': (100, 100), 'learning_rate': 'constant'}
-
-  Confusion Matrix:
-  [[TN=104  FP= 64]
-   [FN= 62  TP=129]]
-
-======================================================================
-ENSEMBLE MODEL EVALUATION
-======================================================================
-
-──────────────────────────────────────────────────
-Training Voting_Ensemble...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6667
-  Fold 2: Accuracy = 0.7500
-  Fold 3: Accuracy = 0.5833
-  Fold 4: Accuracy = 0.4722
-  Fold 5: Accuracy = 0.7183
-
-  RESULTS for Voting_Ensemble:
-  ├── Accuracy: 0.6379 (±0.1003)
-  ├── F1 Score: 0.6667
-  └── AUC-ROC:  0.6943
-
-  Confusion Matrix:
-  [[TN= 99  FP= 69]
-   [FN= 61  TP=130]]
-
-──────────────────────────────────────────────────
-Training Stacking_Ensemble...
-──────────────────────────────────────────────────
-  Fold 1: Accuracy = 0.6667
-  Fold 2: Accuracy = 0.7639
-  Fold 3: Accuracy = 0.5278
-  Fold 4: Accuracy = 0.4583
-  Fold 5: Accuracy = 0.7183
-
-  RESULTS for Stacking_Ensemble:
-  ├── Accuracy: 0.6267 (±0.1157)
-  ├── F1 Score: 0.6599
-  └── AUC-ROC:  0.6509
-
-  Confusion Matrix:
-  [[TN= 95  FP= 73]
-   [FN= 61  TP=130]]
-
-======================================================================
-FINAL RESULTS SUMMARY
-======================================================================
-
-Model                     Accuracy        F1 Score     AUC-ROC
-────────────────────────────────────────────────────────────────
-SVM_Linear                0.6518 (±0.0630) 0.6736       0.6811
-MLP                       0.6490 (±0.0676) 0.6719       0.7048
-Random_Forest             0.6435 (±0.1045) 0.6684       0.6885
-Voting_Ensemble           0.6379 (±0.1003) 0.6667       0.6943
-Gradient_Boosting         0.6267 (±0.1067) 0.6474       0.6848
-Stacking_Ensemble         0.6267 (±0.1157) 0.6599       0.6509
-SVM_RBF                   0.6212 (±0.0759) 0.6513       0.6610
-
-======================================================================
-BEST MODEL: SVM_Linear with 65.18% accuracy
-======================================================================
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis>   & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py"
-======================================================================
-ASD vs TD CLASSIFICATION - ENHANCED PIPELINE V2
-Started: 2025-12-06 13:13:18
-======================================================================
-
-Configuration:
-  - Audio duration: 2.0s
-  - Augmentation: True (x3)
-  - Pitch features: True
-  - Voice quality: True
-  - Age feature: True
-  - Subject voting: True
-Loading and extracting features...
-Traceback (most recent call last):
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 938, in <module>
-    results = main()
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 903, in main
-    X, y, groups, subjects = load_data(config)
-  File "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py", line 593, in load_data
-    folders = sorted(os.listdir(config.DATA_PATH))
-FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\User\\Desktop\\Tsakalidou Thesis\\Tsakalidou Thesis\\data\\Raw_and_cleaned_cry_data\\Sounds\\cleaned'
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> & "C:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/venv/Scripts/python.exe" "c:/Users/User/Desktop/Tsakalidou Thesis/Tsakalidou_Thesis/idea_2/final_2.py"
-======================================================================
-ASD vs TD CLASSIFICATION - ENHANCED PIPELINE V2
-Started: 2025-12-06 13:15:19
-======================================================================
-
-Configuration:
-  - Audio duration: 2.0s
-  - Augmentation: True (x3)
-  - Pitch features: True
-  - Voice quality: True
-  - Age feature: True
-  - Subject voting: True
-Loading and extracting features...
-  ASD1: 9 samples (+27 augmented)
-  ASD10: 4 samples (+12 augmented)
-  ASD11: 12 samples (+36 augmented)
-  ASD12: 18 samples (+54 augmented)
-  ASD13: 3 samples (+9 augmented)
-  ASD14: 5 samples (+15 augmented)
-  ASD15: 5 samples (+15 augmented)
-  ASD16: 2 samples (+6 augmented)
-  ASD17: 1 samples (+3 augmented)
-  ASD18: 2 samples (+6 augmented)
-  ASD19: 1 samples (+3 augmented)
-  ASD2: 3 samples (+9 augmented)
-  ASD20: 19 samples (+57 augmented)
-  ASD21: 1 samples (+3 augmented)
-  ASD22: 2 samples (+6 augmented)
-  ASD23: 6 samples (+18 augmented)
-  ASD24: 7 samples (+21 augmented)
-  ASD25: 12 samples (+36 augmented)
-  ASD26: 5 samples (+15 augmented)
-  ASD27: 3 samples (+9 augmented)
-  ASD28: 2 samples (+6 augmented)
-  ASD29: 8 samples (+24 augmented)
-  ASD3: 5 samples (+15 augmented)
-  ASD30: 2 samples (+6 augmented)
-  ASD31: 7 samples (+21 augmented)
-  ASD4: 13 samples (+39 augmented)
-  ASD5: 14 samples (+42 augmented)
-  ASD6: 4 samples (+12 augmented)
-  ASD7: 11 samples (+33 augmented)
-  ASD8: 2 samples (+6 augmented)
-  ASD9: 3 samples (+9 augmented)
-  TD1: 11 samples (+33 augmented)
-  TD10: 2 samples (+6 augmented)
-  TD11: 5 samples (+15 augmented)
-  TD12: 7 samples (+21 augmented)
-  TD13: 7 samples (+21 augmented)
-  TD14: 9 samples (+27 augmented)
-  TD15: 4 samples (+12 augmented)
-  TD16: 3 samples (+9 augmented)
-  TD17: 2 samples (+6 augmented)
-  TD18: 6 samples (+18 augmented)
-  TD19: 4 samples (+12 augmented)
-  TD2: 12 samples (+36 augmented)
-  TD20: 5 samples (+15 augmented)
-  TD21: 11 samples (+33 augmented)
-  TD22: 4 samples (+12 augmented)
-  TD23: 4 samples (+12 augmented)
-  TD24: 12 samples (+36 augmented)
-  TD25: 5 samples (+15 augmented)
-  TD26: 2 samples (+6 augmented)
-  TD27: 5 samples (+15 augmented)
-  TD28: 2 samples (+6 augmented)
-  TD29: 16 samples (+48 augmented)
-  TD3: 2 samples (+6 augmented)
-  TD30: 6 samples (+18 augmented)
-  TD31: 2 samples (+6 augmented)
-  TD4: 6 samples (+18 augmented)
-  TD5: 3 samples (+9 augmented)
-  TD6: 3 samples (+9 augmented)
-  TD7: 3 samples (+9 augmented)
-  TD8: 3 samples (+9 augmented)
-  TD9: 2 samples (+6 augmented)
-
-Data loaded:
-  Samples: 1436
-  Features: 499
-  ASD: 764, TD: 672
-  Subjects: 62
-
-Original features: 499
-Selected features: 200
-
-Using 5-Fold Group CV
-
-======================================================================
-MODEL TRAINING
-======================================================================
-
-──────────────────────────────────────────────────
-Training: SVM_RBF
-──────────────────────────────────────────────────
-  Fold 1: 0.7188 (12 subjects)
-  Fold 2: 0.7708 (12 subjects)
-  Fold 3: 0.5972 (13 subjects)
-  Fold 4: 0.4618 (13 subjects)
-  Fold 5: 0.7113 (12 subjects)
-
-  Sample-level:  Acc=0.6518, F1=0.6680, AUC=0.7266
-  Subject-level: Acc=0.7097, F1=0.7273, AUC=0.7825
-
-──────────────────────────────────────────────────
-Training: SVM_Linear
-──────────────────────────────────────────────────
-  Fold 1: 0.7604 (12 subjects)
-  Fold 2: 0.7083 (12 subjects)
-  Fold 3: 0.5625 (13 subjects)
-  Fold 4: 0.4271 (13 subjects)
-  Fold 5: 0.6937 (12 subjects)
-
-  Sample-level:  Acc=0.6302, F1=0.6462, AUC=0.6951
-  Subject-level: Acc=0.6290, F1=0.6667, AUC=0.7409
-
-──────────────────────────────────────────────────
-Training: Random_Forest
-──────────────────────────────────────────────────
-  Fold 1: 0.7569 (12 subjects)
-  Fold 2: 0.7882 (12 subjects)
-  Fold 3: 0.7153 (13 subjects)
-  Fold 4: 0.5069 (13 subjects)
-  Fold 5: 0.6725 (12 subjects)
-
-  Sample-level:  Acc=0.6880, F1=0.6989, AUC=0.7396
-  Subject-level: Acc=0.7581, F1=0.7619, AUC=0.7992
-
-──────────────────────────────────────────────────
-Training: Gradient_Boosting
-──────────────────────────────────────────────────
-  Fold 1: 0.7986 (12 subjects)
-  Fold 2: 0.8090 (12 subjects)
-  Fold 3: 0.4896 (13 subjects)
-  Fold 4: 0.5729 (13 subjects)
-  Fold 5: 0.6092 (12 subjects)
-
-  Sample-level:  Acc=0.6560, F1=0.6702, AUC=0.7083
-  Subject-level: Acc=0.7258, F1=0.7463, AUC=0.7409
-
-──────────────────────────────────────────────────
-Training: Extra_Trees
-──────────────────────────────────────────────────
-  Fold 1: 0.7361 (12 subjects)
-  Fold 2: 0.7569 (12 subjects)
-  Fold 3: 0.6875 (13 subjects)
-  Fold 4: 0.5278 (13 subjects)
-  Fold 5: 0.7254 (12 subjects)
-
-  Sample-level:  Acc=0.6866, F1=0.6976, AUC=0.7315
-  Subject-level: Acc=0.7258, F1=0.7385, AUC=0.7971
-
-──────────────────────────────────────────────────
-Training: MLP
-──────────────────────────────────────────────────
-  Fold 1: 0.7188 (12 subjects)
-  Fold 2: 0.6632 (12 subjects)
-  Fold 3: 0.5521 (13 subjects)
-  Fold 4: 0.4896 (13 subjects)
-  Fold 5: 0.6620 (12 subjects)
-
-  Sample-level:  Acc=0.6170, F1=0.6358, AUC=0.6704
-  Subject-level: Acc=0.6613, F1=0.6667, AUC=0.7211
-
-──────────────────────────────────────────────────
-Training: Voting Ensemble
-──────────────────────────────────────────────────
-
-  Sample-level:  Acc=0.7040, F1=0.7157, AUC=0.7528
-  Subject-level: Acc=0.7419, F1=0.7500, AUC=0.8075
-
-======================================================================
-FINAL RESULTS (SUBJECT-LEVEL)
-======================================================================
-
-Model                Subject Acc     Subject F1   Subject AUC
 ────────────────────────────────────────────────────────────
-Random_Forest        0.7581          0.7619        0.7992
-Voting_Ensemble      0.7419          0.7500        0.8075
-Gradient_Boosting    0.7258          0.7463        0.7409
-Extra_Trees          0.7258          0.7385        0.7971
-SVM_RBF              0.7097          0.7273        0.7825
-MLP                  0.6613          0.6667        0.7211
-SVM_Linear           0.6290          0.6667        0.7409
+FOLD 1
+────────────────────────────────────────────────────────────
+ASD subjects (3): ['ASD10', 'ASD20', 'ASD26']
+  Ages: [26, 40, 45] (mean: 37.0)
+  Samples per subject: [5, 19, 4] (total: 28)
 
-======================================================================
-🏆 BEST: Random_Forest - Subject Accuracy: 75.81%
-======================================================================
-PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis> 
+TD subjects (9): ['TD1', 'TD10', 'TD14', 'TD15', 'TD20', 'TD30', 'TD31', 'TD6', 'TD9']
+  Ages: [20, 21, 21, 24, 38, 44, 50, 51, 51] (mean: 35.6)
+  Samples per subject: [3, 4, 6, 9, 2, 2, 11, 5, 2] (total: 44)
+
+Total test samples: 72 (ASD: 28, TD: 44)
+
+────────────────────────────────────────────────────────────
+FOLD 2
+────────────────────────────────────────────────────────────
+ASD subjects (4): ['ASD12', 'ASD29', 'ASD30', 'ASD8']
+  Ages: [30, 41, 43, 45] (mean: 39.8)
+  Samples per subject: [8, 18, 2, 2] (total: 30)
+
+TD subjects (8): ['TD11', 'TD13', 'TD16', 'TD19', 'TD22', 'TD24', 'TD25', 'TD3']
+  Ages: [18, 19, 24, 24, 24, 26, 30, 43] (mean: 26.0)
+  Samples per subject: [12, 3, 7, 4, 4, 2, 5, 5] (total: 42)
+
+Total test samples: 72 (ASD: 30, TD: 42)
+
+────────────────────────────────────────────────────────────
+FOLD 3
+────────────────────────────────────────────────────────────
+ASD subjects (5): ['ASD1', 'ASD17', 'ASD2', 'ASD21', 'ASD9']
+  Ages: [20, 24, 34, 45, 45] (mean: 33.6)
+  Samples per subject: [3, 9, 1, 1, 3] (total: 17)
+
+TD subjects (8): ['TD12', 'TD18', 'TD2', 'TD23', 'TD26', 'TD27', 'TD29', 'TD5']
+  Ages: [18, 24, 24, 25, 29, 30, 36, 45] (mean: 28.9)
+  Samples per subject: [5, 3, 4, 7, 6, 2, 12, 16] (total: 55)
+
+Total test samples: 72 (ASD: 17, TD: 55)
+
+────────────────────────────────────────────────────────────
+FOLD 4
+────────────────────────────────────────────────────────────
+ASD subjects (10): ['ASD11', 'ASD13', 'ASD15', 'ASD19', 'ASD23', 'ASD28', 'ASD31', 'ASD5', 'ASD6', 'ASD7']
+  Ages: [28, 29, 30, 31, 32, 33, 36, 37, 49, 52] (mean: 35.7)
+  Samples per subject: [4, 7, 6, 5, 2, 3, 14, 12, 11, 1] (total: 65)
+
+TD subjects (3): ['TD17', 'TD28', 'TD7']
+  Ages: [24, 33, 41] (mean: 32.7)
+  Samples per subject: [2, 2, 3] (total: 7)
+
+Total test samples: 72 (ASD: 65, TD: 7)
+
+────────────────────────────────────────────────────────────
+FOLD 5
+────────────────────────────────────────────────────────────
+ASD subjects (9): ['ASD14', 'ASD16', 'ASD18', 'ASD22', 'ASD24', 'ASD25', 'ASD27', 'ASD3', 'ASD4']
+  Ages: [25, 26, 28, 31, 31, 33, 35, 48, 53] (mean: 34.4)
+  Samples per subject: [3, 2, 2, 5, 7, 12, 13, 5, 2] (total: 51)
+
+TD subjects (3): ['TD21', 'TD4', 'TD8']
+  Ages: [28, 29, 43] (mean: 33.3)
+  Samples per subject: [3, 6, 11] (total: 20)
+
+Total test samples: 71 (ASD: 51, TD: 20)
+
+================================================================================
+SUBJECT-LEVEL CLASSIFICATION ANALYSIS
+================================================================================
+
+🔴 HARD-TO-CLASSIFY SUBJECTS (likely misclassified):
+------------------------------------------------------------------------------------------
+Subject    True   Pred   Prob     Age    Samples  Fold   Correct
+------------------------------------------------------------------------------------------
+ASD29      ASD    ASD    0.501    41     8        2      ✓
+TD21       TD     ASD    0.506    29     11       5      ✗
+TD22       TD     ASD    0.507    30     4        2      ✗
+ASD22      ASD    TD     0.492    48     2        5      ✗
+TD27       TD     ASD    0.510    29     5        3      ✗
+TD25       TD     TD     0.484    24     5        2      ✓
+TD16       TD     ASD    0.520    24     3        2      ✗
+TD30       TD     ASD    0.522    50     6        1      ✗
+ASD26      ASD    TD     0.478    26     5        1      ✗
+TD29       TD     TD     0.470    45     16       3      ✓
+ASD18      ASD    TD     0.468    35     2        5      ✗
+TD7        TD     ASD    0.535    41     3        4      ✗
+ASD9       ASD    ASD    0.542    45     3        3      ✓
+ASD27      ASD    TD     0.458    31     3        5      ✗
+ASD20      ASD    ASD    0.551    40     19       1      ✓
+TD3        TD     TD     0.448    26     2        2      ✓
+ASD31      ASD    TD     0.441    49     7        4      ✗
+TD24       TD     ASD    0.565    43     12       2      ✗
+TD19       TD     TD     0.427    24     4        2      ✓
+TD1        TD     TD     0.427    21     11       1      ✓
+TD14       TD     TD     0.426    20     9        1      ✓
+TD23       TD     TD     0.423    30     4        3      ✓
+ASD28      ASD    ASD    0.578    32     2        4      ✓
+ASD14      ASD    ASD    0.579    31     5        5      ✓
+TD31       TD     ASD    0.580    51     2        1      ✗
+TD4        TD     TD     0.410    28     6        5      ✓
+ASD5       ASD    TD     0.406    29     14       4      ✗
+ASD25      ASD    TD     0.397    25     12       5      ✗
+TD10       TD     ASD    0.622    51     2        1      ✗
+TD18       TD     ASD    0.627    24     6        3      ✗
+TD2        TD     ASD    0.655    24     12       3      ✗
+ASD19      ASD    TD     0.340    37     1        4      ✗
+TD15       TD     ASD    0.661    21     4        1      ✗
+ASD7       ASD    TD     0.314    36     11       4      ✗
+TD5        TD     ASD    0.697    36     3        3      ✗
+ASD16      ASD    TD     0.297    33     2        5      ✗
+TD8        TD     ASD    0.750    43     3        5      ✗
+TD26       TD     ASD    0.820    25     2        3      ✗
+
+🟢 EASY-TO-CLASSIFY SUBJECTS (confident predictions):
+------------------------------------------------------------------------------------------
+Subject    True   Pred   Prob     Age    Samples  Fold   Correct
+------------------------------------------------------------------------------------------
+ASD17      ASD    ASD    0.910    34     1        3      ✓
+ASD1       ASD    ASD    0.825    20     9        3      ✓
+TD11       TD     TD     0.194    18     5        2      ✓
+ASD30      ASD    ASD    0.775    45     2        2      ✓
+ASD24      ASD    ASD    0.766    53     7        5      ✓
+TD6        TD     TD     0.243    38     3        1      ✓
+ASD10      ASD    ASD    0.755    45     4        1      ✓
+ASD21      ASD    ASD    0.755    45     1        3      ✓
+ASD6       ASD    ASD    0.731    31     4        4      ✓
+ASD4       ASD    ASD    0.727    28     13       5      ✓
+ASD2       ASD    ASD    0.708    24     3        3      ✓
+ASD8       ASD    ASD    0.708    43     2        2      ✓
+TD28       TD     TD     0.305    33     2        4      ✓
+ASD23      ASD    ASD    0.634    52     6        4      ✓
+ASD12      ASD    ASD    0.631    30     18       2      ✓
+
+================================================================================
+FOLD PERFORMANCE BREAKDOWN
+================================================================================
+
+────────────────────────────────────────────────────────────
+FOLD 1
+────────────────────────────────────────────────────────────
+Sample accuracy: 0.6111
+Subject accuracy: 0.7500 (9/12)
+Hard subjects in fold: 8/12 (['TD15', 'ASD26', 'TD30', 'ASD20', 'TD14', 'TD31', 'TD1', 'TD10'])
+Misclassified subjects: ['TD15', 'ASD26', 'TD31']
+
+Age distribution:
+  Test ages: min=20, max=51, mean=35.9
+  Train ages: min=18, max=53, mean=32.6
+
+────────────────────────────────────────────────────────────
+FOLD 2
+────────────────────────────────────────────────────────────
+Sample accuracy: 0.6389
+Subject accuracy: 0.6667 (8/12)
+Hard subjects in fold: 7/12 (['ASD29', 'TD24', 'TD16', 'TD22', 'TD19', 'TD3', 'TD25'])
+Misclassified subjects: ['TD24', 'TD16', 'TD22', 'TD25']
+
+Age distribution:
+  Test ages: min=18, max=45, mean=30.6
+  Train ages: min=18, max=53, mean=33.9
+
+────────────────────────────────────────────────────────────
+FOLD 3
+────────────────────────────────────────────────────────────
+Sample accuracy: 0.5556
+Subject accuracy: 0.6923 (9/13)
+Hard subjects in fold: 8/13 (['ASD9', 'TD27', 'TD5', 'TD23', 'TD18', 'TD26', 'TD2', 'TD29'])
+Misclassified subjects: ['TD5', 'TD18', 'TD26', 'TD2']
+
+Age distribution:
+  Test ages: min=18, max=45, mean=30.7
+  Train ages: min=18, max=53, mean=33.9
+
+────────────────────────────────────────────────────────────
+FOLD 4
+────────────────────────────────────────────────────────────
+Sample accuracy: 0.5139
+Subject accuracy: 0.5385 (7/13)
+Hard subjects in fold: 6/13 (['ASD31', 'ASD28', 'ASD5', 'ASD7', 'ASD19', 'TD7'])
+Misclassified subjects: ['ASD31', 'ASD28', 'ASD5', 'ASD7', 'ASD19', 'TD7']
+
+Age distribution:
+  Test ages: min=24, max=52, mean=35.0
+  Train ages: min=18, max=53, mean=32.8
+
+────────────────────────────────────────────────────────────
+FOLD 5
+────────────────────────────────────────────────────────────
+Sample accuracy: 0.5634
+Subject accuracy: 0.4167 (5/12)
+Hard subjects in fold: 9/12 (['TD8', 'ASD27', 'ASD22', 'ASD18', 'ASD25', 'TD4', 'TD21', 'ASD14', 'ASD16'])
+Misclassified subjects: ['TD8', 'ASD27', 'ASD22', 'ASD18', 'ASD25', 'TD21', 'ASD16']
+
+Age distribution:
+  Test ages: min=25, max=53, mean=34.2
+  Train ages: min=18, max=52, mean=33.0
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+📊 SUMMARY:
+  Total hard subjects: 38/62
+  Hard ASD subjects: 15 (['ASD29', 'ASD22', 'ASD26', 'ASD18', 'ASD9', 'ASD27', 'ASD20', 'ASD31', 'ASD28', 'ASD14', 'ASD5', 'ASD25', 'ASD19', 'ASD7', 'ASD16'])
+  Hard TD subjects: 23 (['TD21', 'TD22', 'TD27', 'TD25', 'TD16', 'TD30', 'TD29', 'TD7', 'TD3', 'TD24', 'TD19', 'TD1', 'TD14', 'TD23', 'TD31', 'TD4', 'TD10', 'TD18', 'TD2', 'TD15', 'TD5', 'TD8', 'TD26'])
+
+📊 AGE ANALYSIS:
+  Hard subjects avg age: 33.6 months
+  All subjects avg age: 33.3 months
+
+📊 SAMPLE COUNT:
+  Hard subjects avg samples: 6.1
+
+📊 LOW SAMPLE SUBJECTS (≤2 samples): 16
+  TD10: 2 samples, HARD
+  TD31: 2 samples, HARD
+  TD9: 2 samples, OK
+  ASD30: 2 samples, OK
+  ASD8: 2 samples, OK
+  TD3: 2 samples, HARD
+  ASD17: 1 samples, OK
+  ASD21: 1 samples, OK
+  TD26: 2 samples, HARD
+  ASD19: 1 samples, HARD
+  ASD28: 2 samples, HARD
+  TD17: 2 samples, OK
+  TD28: 2 samples, OK
+  ASD16: 2 samples, HARD
+  ASD18: 2 samples, HARD
+  ASD22: 2 samples, HARD
+
+================================================================================
+💡 ACTIONABLE RECOMMENDATIONS:
+================================================================================
+
+1. HANDLE HARD SUBJECTS:
+   - Consider removing subjects with very low sample counts (1-2 samples)
+   - Or: Use Leave-One-Subject-Out CV for more robust evaluation
+
+2. AGE STRATIFICATION:
+   - Try stratifying by age groups when splitting folds
+   - Some age groups might have clearer ASD vs TD differences
+
+3. DATA QUALITY CHECK:
+   - Manually listen to samples from hard subjects
+   - Check if recordings are high quality
+   - Some might be mislabeled or ambiguous cases
+
+4. SUBJECT-SPECIFIC AUGMENTATION:
+   - Generate more augmented samples for subjects with few samples
+   - This helps the model learn better representations
+
+5. CUSTOM FOLD ASSIGNMENT:
+   - Distribute hard subjects evenly across folds
+   - Don't let them cluster in folds 3 and 4
+
+6. THRESHOLD ADJUSTMENT:
+   - For hard subjects, use confidence thresholds
+   - Mark uncertain predictions as "needs review"
+
+
+================================================================================
+📍 FOLD 3 AND 4 SPECIFIC ANALYSIS:
+================================================================================
+
+Hard subjects by fold:
+  Fold 1: 8
+  Fold 2: 7
+  Fold 3: 8 (['TD27', 'TD29', 'ASD9', 'TD23', 'TD18', 'TD2', 'TD5', 'TD26'])
+  Fold 4: 6 (['TD7', 'ASD31', 'ASD28', 'ASD5', 'ASD19', 'ASD7'])
+  Fold 5: 9
+
+================================================================================
+Analysis complete!
+================================================================================

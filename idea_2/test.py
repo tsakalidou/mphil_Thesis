@@ -36,7 +36,7 @@ warnings.filterwarnings('ignore')
 # =============================================================================
 
 # UPDATE THIS PATH
-DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
+DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
 
 AGES = {
     'ASD1': 20, 'ASD2': 24, 'ASD3': 26, 'ASD4': 28, 'ASD5': 29,
