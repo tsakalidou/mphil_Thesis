@@ -611,8 +611,7 @@ if __name__ == '__main__':
     # =========================================================================
     
     # UPDATE THIS PATH to your data location
-    data_path = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
-    
+    data_path = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
     # Subject ages (in months)
     ages = {
         'ASD1': 20, 'ASD2': 24, 'ASD3': 26, 'ASD4': 28, 'ASD5': 29,

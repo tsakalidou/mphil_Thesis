@@ -86,7 +86,7 @@ def preprocess_raw_data(data: list, fix_length: int, mfcc_parameters: dict):
     return mfcc_features
 
 if __name__ == '__main__':
-    data_path = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
+    ata_path = r'C:\Users\User\Desktop\Tsakalidou_Thesis\Tsakalidou_Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
     ages = {
         'ASD1': 20, 'ASD2': 24, 'ASD3': 26, 'ASD4': 28, 'ASD5': 29,
         'ASD6': 31, 'ASD7': 36, 'ASD8': 43, 'ASD9': 45, 'ASD10': 45,

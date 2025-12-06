@@ -1,0 +1,256 @@
+======================================================================
+ASD vs TD CLASSIFICATION - ENHANCED PIPELINE
+======================================================================
+
+Configuration:
+  - Audio length: 1.0s (44100 samples)
+  - Sample rate: 44100 Hz
+  - FFT size: 512
+  - Frame size: 11.61ms
+  - Frame step: 3.85ms
+  - Mel filters: 40
+  - MFCC coefficients: 12
+
+Loading and processing audio files...
+  ASD1: 9 samples loaded
+  ASD10: 4 samples loaded
+  ASD11: 12 samples loaded
+  ASD12: 18 samples loaded
+  ASD13: 3 samples loaded
+  ASD14: 5 samples loaded
+  ASD15: 5 samples loaded
+  ASD16: 2 samples loaded
+  ASD17: 1 samples loaded
+  ASD18: 2 samples loaded
+  ASD19: 1 samples loaded
+  ASD2: 3 samples loaded
+  ASD20: 19 samples loaded
+  ASD21: 1 samples loaded
+  ASD22: 2 samples loaded
+  ASD23: 6 samples loaded
+  ASD24: 7 samples loaded
+  ASD25: 12 samples loaded
+  ASD26: 5 samples loaded
+  ASD27: 3 samples loaded
+  ASD28: 2 samples loaded
+  ASD29: 8 samples loaded
+  ASD3: 5 samples loaded
+  ASD30: 2 samples loaded
+  ASD31: 7 samples loaded
+  ASD4: 13 samples loaded
+  ASD5: 14 samples loaded
+  ASD6: 4 samples loaded
+  ASD7: 11 samples loaded
+  ASD8: 2 samples loaded
+  ASD9: 3 samples loaded
+  TD1: 11 samples loaded
+  TD10: 2 samples loaded
+  TD11: 5 samples loaded
+  TD12: 7 samples loaded
+  TD13: 7 samples loaded
+  TD14: 9 samples loaded
+  TD15: 4 samples loaded
+  TD16: 3 samples loaded
+  TD17: 2 samples loaded
+  TD18: 6 samples loaded
+  TD19: 4 samples loaded
+  TD2: 12 samples loaded
+  TD20: 5 samples loaded
+  TD21: 11 samples loaded
+  TD22: 4 samples loaded
+  TD23: 4 samples loaded
+  TD24: 12 samples loaded
+  TD25: 5 samples loaded
+  TD26: 2 samples loaded
+  TD27: 5 samples loaded
+  TD28: 2 samples loaded
+  TD29: 16 samples loaded
+  TD3: 2 samples loaded
+  TD30: 6 samples loaded
+  TD31: 2 samples loaded
+  TD4: 6 samples loaded
+  TD5: 3 samples loaded
+  TD6: 3 samples loaded
+  TD7: 3 samples loaded
+  TD8: 3 samples loaded
+  TD9: 2 samples loaded
+
+──────────────────────────────────────────────────
+DATA SUMMARY
+──────────────────────────────────────────────────
+Total samples: 359
+ASD samples: 191 (53.2%)
+TD samples: 168 (46.8%)
+Number of subjects: 62
+Feature dimensions: 376
+
+Original feature count: 376
+Selected feature count: 200
+
+======================================================================
+MODEL EVALUATION WITH SUBJECT-LEVEL CROSS-VALIDATION
+======================================================================
+
+──────────────────────────────────────────────────
+Training SVM_RBF...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6111 (12 subjects in test)
+  Fold 2: Accuracy = 0.7083 (12 subjects in test)
+  Fold 3: Accuracy = 0.5694 (13 subjects in test)
+  Fold 4: Accuracy = 0.5139 (13 subjects in test)
+  Fold 5: Accuracy = 0.7042 (12 subjects in test)
+
+  RESULTS for SVM_RBF:
+  ├── Accuracy:  0.6212 (±0.0759)
+  ├── F1 Score:  0.6513
+  ├── Precision: 0.6382
+  ├── Recall:    0.6649
+  ├── AUC-ROC:   0.6610
+  └── Best params: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}
+
+  Confusion Matrix:
+  [[TN= 96  FP= 72]
+   [FN= 64  TP=127]]
+
+──────────────────────────────────────────────────
+Training SVM_Linear...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6389 (12 subjects in test)
+  Fold 2: Accuracy = 0.6806 (12 subjects in test)
+  Fold 3: Accuracy = 0.6667 (13 subjects in test)
+  Fold 4: Accuracy = 0.5417 (13 subjects in test)
+  Fold 5: Accuracy = 0.7324 (12 subjects in test)
+
+  RESULTS for SVM_Linear:
+  ├── Accuracy:  0.6518 (±0.0630)
+  ├── F1 Score:  0.6736
+  ├── Precision: 0.6719
+  ├── Recall:    0.6754
+  ├── AUC-ROC:   0.6811
+  └── Best params: {'C': 0.1, 'kernel': 'linear'}
+
+  Confusion Matrix:
+  [[TN=105  FP= 63]
+   [FN= 62  TP=129]]
+
+──────────────────────────────────────────────────
+Training Random_Forest...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6944 (12 subjects in test)
+  Fold 2: Accuracy = 0.7639 (12 subjects in test)
+  Fold 3: Accuracy = 0.6111 (13 subjects in test)
+  Fold 4: Accuracy = 0.4583 (13 subjects in test)
+  Fold 5: Accuracy = 0.6901 (12 subjects in test)
+
+  RESULTS for Random_Forest:
+  ├── Accuracy:  0.6435 (±0.1045)
+  ├── F1 Score:  0.6684
+  ├── Precision: 0.6615
+  ├── Recall:    0.6754
+  ├── AUC-ROC:   0.6885
+  └── Best params: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+
+  Confusion Matrix:
+  [[TN=102  FP= 66]
+   [FN= 62  TP=129]]
+
+──────────────────────────────────────────────────
+Training Gradient_Boosting...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6528 (12 subjects in test)
+  Fold 2: Accuracy = 0.7222 (12 subjects in test)
+  Fold 3: Accuracy = 0.6111 (13 subjects in test)
+  Fold 4: Accuracy = 0.4306 (13 subjects in test)
+  Fold 5: Accuracy = 0.7183 (12 subjects in test)
+
+  RESULTS for Gradient_Boosting:
+  ├── Accuracy:  0.6267 (±0.1067)
+  ├── F1 Score:  0.6474
+  ├── Precision: 0.6508
+  ├── Recall:    0.6440
+  ├── AUC-ROC:   0.6848
+  └── Best params: {'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
+
+  Confusion Matrix:
+  [[TN=102  FP= 66]
+   [FN= 68  TP=123]]
+
+──────────────────────────────────────────────────
+Training MLP...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6250 (12 subjects in test)
+  Fold 2: Accuracy = 0.7361 (12 subjects in test)
+  Fold 3: Accuracy = 0.6389 (13 subjects in test)
+  Fold 4: Accuracy = 0.5417 (13 subjects in test)
+  Fold 5: Accuracy = 0.7042 (12 subjects in test)
+
+  RESULTS for MLP:
+  ├── Accuracy:  0.6490 (±0.0676)
+  ├── F1 Score:  0.6719
+  ├── Precision: 0.6684
+  ├── Recall:    0.6754
+  ├── AUC-ROC:   0.7048
+  └── Best params: {'alpha': 0.01, 'hidden_layer_sizes': (100, 100), 'learning_rate': 'constant'}
+
+  Confusion Matrix:
+  [[TN=104  FP= 64]
+   [FN= 62  TP=129]]
+
+======================================================================
+ENSEMBLE MODEL EVALUATION
+======================================================================
+
+──────────────────────────────────────────────────
+Training Voting_Ensemble...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6667
+  Fold 2: Accuracy = 0.7500
+  Fold 3: Accuracy = 0.5833
+  Fold 4: Accuracy = 0.4722
+  Fold 5: Accuracy = 0.7183
+
+  RESULTS for Voting_Ensemble:
+  ├── Accuracy: 0.6379 (±0.1003)
+  ├── F1 Score: 0.6667
+  └── AUC-ROC:  0.6943
+
+  Confusion Matrix:
+  [[TN= 99  FP= 69]
+   [FN= 61  TP=130]]
+
+──────────────────────────────────────────────────
+Training Stacking_Ensemble...
+──────────────────────────────────────────────────
+  Fold 1: Accuracy = 0.6667
+  Fold 2: Accuracy = 0.7639
+  Fold 3: Accuracy = 0.5278
+  Fold 4: Accuracy = 0.4583
+  Fold 5: Accuracy = 0.7183
+
+  RESULTS for Stacking_Ensemble:
+  ├── Accuracy: 0.6267 (±0.1157)
+  ├── F1 Score: 0.6599
+  └── AUC-ROC:  0.6509
+
+  Confusion Matrix:
+  [[TN= 95  FP= 73]
+   [FN= 61  TP=130]]
+
+======================================================================
+FINAL RESULTS SUMMARY
+======================================================================
+
+Model                     Accuracy        F1 Score     AUC-ROC
+────────────────────────────────────────────────────────────────
+SVM_Linear                0.6518 (±0.0630) 0.6736       0.6811
+MLP                       0.6490 (±0.0676) 0.6719       0.7048
+Random_Forest             0.6435 (±0.1045) 0.6684       0.6885
+Voting_Ensemble           0.6379 (±0.1003) 0.6667       0.6943
+Gradient_Boosting         0.6267 (±0.1067) 0.6474       0.6848
+Stacking_Ensemble         0.6267 (±0.1157) 0.6599       0.6509
+SVM_RBF                   0.6212 (±0.0759) 0.6513       0.6610
+
+======================================================================
+BEST MODEL: SVM_Linear with 65.18% accuracy
+======================================================================
+PS C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis>   
