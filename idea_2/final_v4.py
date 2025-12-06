@@ -68,7 +68,7 @@ except ImportError:
 
 class Config:
     # UPDATE THIS PATH
-    DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
+    DATA_PATH = r'C:\Users\User\Desktop\Tsakalidou Thesis\Tsakalidou_Thesis\data\Raw_and_cleaned_cry_data\Sounds\cleaned'
     
     # Audio settings
     SAMPLE_RATE = 44100
